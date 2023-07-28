@@ -13074,10 +13074,12 @@ function submitGuess() {
 
 	stopInteraction();
 	const matchPattern = getMatchPattern(guess);
-	activeTiles.forEach((...params) => flipTile(...params, matchPattern));
+	activeTiles.forEach((...params) =>
+		flipTile(...params, guess, matchPattern)
+	);
 }
 
-function flipTile(tile, index, array, matchPattern) {
+function flipTile(tile, index, array, guess, matchPattern) {
 	const letter = tile.dataset.letter;
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`);
 	setTimeout(() => {
