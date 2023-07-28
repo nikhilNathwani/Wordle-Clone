@@ -37,7 +37,7 @@ body {
 
 .keyboard {
 	width: 100%;
-	aspect-ratio: 10 / 4;
+	aspect-ratio: 10 / 4.5;
 	/* background-color: aquamarine; */
 	display: grid;
 	grid-template-columns: repeat(20, minmax(0.5em, 1fr));
