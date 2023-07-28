@@ -1,4 +1,4 @@
-const targetWords = ["tense"];
+const targetWords = ["eerie"];
 const dictionary = [
 	"aahed",
 	"aalii",
@@ -13193,12 +13193,14 @@ function getMatchPattern(guess) {
 	}
 	//Then scan for misplaced letters
 	for (let index = 0; index < targetWord.length; index++) {
-		if (
-			targetWord.includes(guess[index]) &&
-			targetWordLetterFreqMap[guess[index]] > 0
-		) {
-			matchPattern[index] = LetterState.CORRECT;
-			targetWordLetterFreqMap[guess[index]] -= 1;
+		if (matchPattern[index] != LetterState.CORRECT) {
+			if (
+				targetWord.includes(guess[index]) &&
+				targetWordLetterFreqMap[guess[index]] > 0
+			) {
+				matchPattern[index] = LetterState.MISPLACED;
+				targetWordLetterFreqMap[guess[index]] -= 1;
+			}
 		}
 	}
 	return matchPattern;
