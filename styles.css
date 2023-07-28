@@ -72,7 +72,7 @@ body {
 
 .key.large {
 	grid-column: span 3;
-	--scale-factor: 0.75;
+	--scale-factor: 0.6;
 	font-size: clamp(
 		calc(0.5rem * var(--scale-factor)),
 		calc(1.25rem * var(--scale-factor)),
