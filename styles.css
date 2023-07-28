@@ -29,7 +29,7 @@ body {
 }
 
 .game-wrapper {
-	width: min(650px, 100%);
+	width: min(500px, 100%);
 	margin: auto;
 	flex-grow: 1;
 	display: flex;
