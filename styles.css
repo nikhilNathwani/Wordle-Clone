@@ -37,6 +37,7 @@ body {
 }
 
 .keyboard {
+	background-color: aquamarine;
 	display: grid;
 	grid-template-columns: repeat(20, minmax(0.5em, 1.25em));
 	grid-auto-rows: 3.25em;
