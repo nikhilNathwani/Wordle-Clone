@@ -2,6 +2,8 @@
 *::after,
 *::before {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 	font-family: Arial;
 }
 
@@ -10,9 +12,25 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	margin: 0;
-	padding: 1em;
 	font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
+}
+
+.header {
+	border-bottom: 3px double white;
+	color: white;
+	text-align: center;
+	padding: 0.5em;
+}
+
+#headerTitle {
+	font-size: 1.25em;
+}
+
+.game-wrapper {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .keyboard {
@@ -83,7 +101,7 @@ body {
 	grid-template-columns: repeat(5, 4em);
 	grid-template-rows: repeat(6, 4em);
 	gap: 0.25em;
-	margin-bottom: 1em;
+	/* margin-bottom: 1em; */
 }
 
 .tile {
