@@ -1,4 +1,4 @@
-const targetWords = ["eerie"];
+const targetWords = ["tense"];
 const dictionary = [
 	"aahed",
 	"aalii",

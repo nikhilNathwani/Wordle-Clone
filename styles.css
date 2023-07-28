@@ -13,6 +13,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
+	padding-bottom: calc(0.25em * 1.5);
 }
 
 .header {
@@ -34,14 +35,15 @@ body {
 
 .keyboard {
 	display: grid;
-	grid-template-columns: repeat(20, minmax(auto, 1.25em));
-	grid-auto-rows: 3em;
-	gap: 0.25em;
+	grid-template-columns: repeat(20, minmax(auto, 1em));
+	grid-auto-rows: 3.25em;
+	gap: 0.375em;
 	justify-content: center;
 }
 
 .key {
 	font-size: inherit;
+	font-weight: bold;
 	grid-column: span 2;
 	border: none;
 	padding: 0;
@@ -63,11 +65,17 @@ body {
 
 .key.large {
 	grid-column: span 3;
+	--scale-factor: 0.85;
+	font-size: clamp(
+		calc(0.5rem * var(--scale-factor)),
+		calc(2.5vmin * var(--scale-factor)),
+		calc(1.5rem * var(--scale-factor))
+	);
 }
 
 .key > svg {
-	width: 1.75em;
-	height: 1.75em;
+	width: 1.5em;
+	height: 1.5em;
 	pointer-events: none;
 }
 
