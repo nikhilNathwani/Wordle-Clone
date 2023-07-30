@@ -38,7 +38,7 @@ body {
 .keyboard {
 	width: 100%;
 	display: grid;
-	background-color: aqua;
+	background-color: lime;
 	grid-template-columns: repeat(20, min(1rem, 4.5vw));
 	grid-auto-rows: 1fr;
 	gap: 1vmin;
