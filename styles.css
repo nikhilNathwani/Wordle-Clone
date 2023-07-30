@@ -47,7 +47,7 @@ body {
 }
 
 .key {
-	height: 3rem;
+	height: min(3.5rem, 7.5vw);
 	font-size: clamp(calc(0.5rem), calc(1.25rem), calc(2rem));
 	font-weight: bold;
 	text-align: center;
